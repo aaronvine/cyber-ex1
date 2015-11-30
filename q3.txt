@@ -1,0 +1,2 @@
+We can recognize the attack by using 'raw' OS check, as we did in q1- 'fingerprinting', and see if it the information
+matches the the information we got in the User-Agent, if not, we know that the information is suspicious.

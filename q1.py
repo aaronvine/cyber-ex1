@@ -22,7 +22,8 @@ class Message:
             return 0
 
     def http_agent_check(self):
-        print self._message['Raw']
+        # TODO
+        return 0
 
     def to_string(self):
         if self.ttl_check() == 0 and self.tcp_options_check() == 0:
@@ -32,6 +33,7 @@ class Message:
 
 
 def filter_message(message):
+    # we want to keep only http get requests.
     if message['Ethernet'].type == 2048:
         if message['IP'].proto == 6:
             if message['TCP'].dport == 80:
